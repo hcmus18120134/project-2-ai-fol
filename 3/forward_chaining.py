@@ -37,7 +37,6 @@ def forward_chaining(kb, depth=-1):
 
                 if new_fact not in new_facts and new_fact not in kb.facts:
                     new_facts.add(new_fact)
-        kb.facts.update(new_facts)
         if not new_facts:
             return
         kb.facts.update(new_facts)

@@ -1,6 +1,6 @@
 criminal(X).
-X = west
 X = a
+X = west
 
 weapon(X).
 X = b52
