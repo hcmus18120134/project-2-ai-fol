@@ -7,17 +7,12 @@ import pdb
 def copy(obj): return pickle.loads(pickle.dumps(obj))
 
 
-objs = set()
-
-
 def GeneralParser(sentence: str, tokenizer: str = ':-'):
     components = sentence.split(tokenizer)
     is_fact = (len(components) == 1)
     components[-1] = components[-1].split('.')[0]
     if is_fact:
         components = Fact.parse(components[0])
-        for obj in components.args:
-            objs.add(obj)
     else:
         components = Rule.parse(components)
     return (is_fact, components)
