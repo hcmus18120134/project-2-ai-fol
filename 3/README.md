@@ -1,6 +1,6 @@
 Run command: 
 ```
-python main.py <id>
+python main.py <testcase-id>
 ```
 Example:
 ```
